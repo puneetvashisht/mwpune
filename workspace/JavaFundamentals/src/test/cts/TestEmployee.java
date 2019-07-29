@@ -29,6 +29,15 @@ public class TestEmployee {
 		
 		System.out.println(manager);
 		
+		
+		Employee employees[] = new Employee[2];
+		employees[0] = emp;
+		employees[1] = manager;
+		
+		for(Employee e : employees){
+			System.out.println(e);
+		}
+		
 	}
 
 }
