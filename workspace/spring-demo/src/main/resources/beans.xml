@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file will contain dependencies configuration ,
+like class A depends on class B
+
+lets copy it from somwhere
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+     
+    <!-- lets write dependency configuration , class B is given bean id: b -->
+    <bean id="b" class="com.cts.di.B"/>
+    
+   <!--  but a contains a dependency on b, it means a has a constructor, pass b object in it  -->
+     <bean id="a" class="com.cts.di.A">
+     	<constructor-arg name="b" ref="b"></constructor-arg>
+     </bean>
+     
+</beans>
