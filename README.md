@@ -22,3 +22,5 @@
         - First thing to create ApplicationContext
             - new ClassPathXMLAC("beans.xml")
             - @ContextConfiguration("classpath:beans.xml")
+        - Extract/Get instances of POJO's by using ApplicationContext
+            - 
