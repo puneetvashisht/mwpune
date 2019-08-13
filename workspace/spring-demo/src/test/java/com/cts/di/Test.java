@@ -1,11 +1,15 @@
 package com.cts.di;
 
+import java.beans.Transient;
+
 // this import is from spring-context, reason why we included spring-context dependency
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
 
+	@Transient
+	public String test;
 	public static void main(String[] args) {
 //		B b = new B();
 //		A a = new A(b);
