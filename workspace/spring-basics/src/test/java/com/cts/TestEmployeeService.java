@@ -2,6 +2,8 @@ package com.cts;
 
 import static org.junit.Assert.*;
 
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +46,12 @@ public class TestEmployeeService {
 		Employee emp = employeeService.findEmployee(21);
 		System.out.println(emp);
 		assertEquals("Check if name is Ravi Jerome", "Ravi Jerome", emp.getName() );
+	}
+	@Test 
+	public void testFindAllEmployee(){
+		List<Employee> employees = employeeService.findAllEmployees();
+		System.out.println(employees);
+		assertEquals("Check 4 records returned back", 4, employees.size() );
 	}
 
 

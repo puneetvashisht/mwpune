@@ -1,5 +1,7 @@
 package com.cts.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +28,10 @@ public class EmployeeService {
 	public Employee deleteEmployee(int id) {
 		return employeeRepository.deleteEmployee(id);
 		
+	}
+
+	public List<Employee> findAllEmployees() {
+		return employeeRepository.findAllEmployees();
 	}
 
 }

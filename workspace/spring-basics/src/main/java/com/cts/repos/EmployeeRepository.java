@@ -75,6 +75,22 @@ public class EmployeeRepository {
 		return null;
 		
 	}
+	public List<Employee> findAllEmployees() {
+		
+		String sql = "select * from Employee";
+		List<Employee> employees = this.jdbcTemplate.query(sql, new RowMapper<Employee>(){
+			@Override
+			public Employee mapRow(ResultSet rs, int arg1) throws SQLException {
+				Employee emp = new Employee();
+				emp.setId(rs.getInt(1));
+				emp.setName(rs.getString(2));
+				emp.setSalary(rs.getDouble(3));
+				return emp;
+			}
+			
+		});
+		return employees;
+	}
 
 
 }
