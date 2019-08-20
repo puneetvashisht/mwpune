@@ -11,7 +11,7 @@
 
     Why to use Spring?
         - DI makes code simpler
-        - One store for application needs : DB interaction - spring-jpa
+        - One store for application needs : DB interaction - spring-jdbc
         - Provides infrastructure code
         - Spring test module--> provides you testing features
     
@@ -23,4 +23,10 @@
             - new ClassPathXMLAC("beans.xml")
             - @ContextConfiguration("classpath:beans.xml")
         - Extract/Get instances of POJO's by using ApplicationContext
-            - 
+    
+    Spring JDBC
+        - JdbcTemplate ready: existing class in spring-jdbc package
+        - Avoids boilerplate code
+        - Simple, write queries and get results.
+
+    Spring JPA(Java Persistence API) 
